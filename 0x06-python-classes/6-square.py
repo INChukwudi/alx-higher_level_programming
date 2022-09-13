@@ -78,6 +78,8 @@ class Square:
             return
 
         for i in range(0, self.__position[1]):
+            if (position > 0):
+                break
             print("")
 
         for i in range(0, self.__size):
