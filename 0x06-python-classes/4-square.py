@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines a square based on 2-square.py
+Defines a square based on 3-square.py
 """
 
 
@@ -18,6 +18,13 @@ class Square:
         """
         self.size = size
 
+    @property
+    def size(self):
+        """
+        Gets and sets the value of the size attribute
+        """
+        return (self.__size)
+
     @size.setter
     def size(self, value):
         """
@@ -32,13 +39,6 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    @property
-    def size(self):
-        """
-        Gets and sets the value of the size attribute
-        """
-        return (self.__size)
 
     def area(self):
         """
