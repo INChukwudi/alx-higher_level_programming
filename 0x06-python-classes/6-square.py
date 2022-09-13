@@ -9,7 +9,7 @@ class Square:
     Represents the square
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Initialises a new sqaure object
 
@@ -17,6 +17,7 @@ class Square:
             size (int): size of the sqaure
         """
         self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -78,8 +79,6 @@ class Square:
             return
 
         for i in range(0, self.__position[1]):
-            if (position > 0):
-                break
             print("")
 
         for i in range(0, self.__size):
