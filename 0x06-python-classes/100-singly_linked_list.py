@@ -66,7 +66,7 @@ class SinglyLinkedList:
     """
     Defines a SinglyLinkedLIst instance
     """
-    
+
     def __init__(self):
         """
         Initialises a new SinglyLinnkedList instance
