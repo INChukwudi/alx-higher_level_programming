@@ -87,3 +87,10 @@ class Square:
             for k in range(0, self.__size):
                 print("#", end="")
             print("")
+
+    def __str__(self):
+        """
+        Defines behaviour when a Sqaure instance is printed
+        """
+        self.my_print()
+        return ("")
