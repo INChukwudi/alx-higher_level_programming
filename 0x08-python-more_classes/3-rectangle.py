@@ -86,10 +86,10 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ("")
 
-        string = ""
+        string = []
         for i in range(self.height):
             for j in range(self.width):
-                string.join(["#"])
+                string.append("#")
             if i != self.height - 1:
-                string.join(["\n"])
-        return (string)
+                string.append("\n")
+        return ("".join(string))
