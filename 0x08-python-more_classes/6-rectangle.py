@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Defines a Rectangle class (based on 3-rectangle.py)
+Defines a Rectangle class (based on 55555tangle.py)
 """
 
 

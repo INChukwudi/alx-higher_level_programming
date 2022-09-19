@@ -1,23 +1,32 @@
 #!/usr/bin/python3
 
 """
-Defines a Rectangle class (based on 4-rectangle.py)
+Defines a Rectangle class (based on 6-rectangle.py)
 """
 
 
 class Rectangle:
     """
     Defines the structure of a Rectangle object
+
+    Attributes:
+        number_of_instnces (int): number of Rectangle instances
+        print_symbol (any): symbol used for the string representation
     """
+
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
-        Initialises a new Reactangle instance
+        Initialises a new Rectangle instance
+        Increments the number_of_instnces attribute
 
         Args:
             width (int): width of the rectangle instance
             height (int): height of the rectangle instance
         """
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -89,7 +98,7 @@ class Rectangle:
         string = []
         for i in range(self.height):
             for j in range(self.width):
-                string.append("#")
+                string.append(print_symbol)
             if i != self.height - 1:
                 string.append("\n")
         return ("".join(string))
@@ -106,5 +115,7 @@ class Rectangle:
         """
         Detects a rectangle instance deletion
         Prints out a message
+        Decrements the number_of_instances attribute
         """
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
