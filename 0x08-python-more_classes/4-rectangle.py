@@ -100,3 +100,4 @@ class Rectangle:
         """
         string = "Rectangle(" + str(self.width) + ", "
         string += str(self.height) + ")"
+        return (string)
