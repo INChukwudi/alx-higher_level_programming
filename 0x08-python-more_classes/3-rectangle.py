@@ -89,7 +89,7 @@ class Rectangle:
         string = ""
         for i in range(self.height):
             for j in range(self.width):
-                string.join("#")
+                string.join(["#"])
             if i != self.height - 1:
-                string.join("\n")
+                string.join(["\n"])
         return (string)
