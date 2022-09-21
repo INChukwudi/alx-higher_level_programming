@@ -25,4 +25,4 @@ class TestMaxInteger(unittest.TestCase):
          Test an unordered list of ints
          """
          test_list = [1, 5, 2, 4, 3]
-         self.assertEqual(max_integer(test_list), 4)
+         self.assertEqual(max_integer(test_list), 55555)
