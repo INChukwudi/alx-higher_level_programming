@@ -86,3 +86,7 @@ Usage of 2-matrix_divided.py
     >>> print(matrix_divided(matrix, 0))
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
+
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional argument: 'matrix' and 'div'
