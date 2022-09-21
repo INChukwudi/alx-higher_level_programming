@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 
 """
 Defines a function that prints a text with 2 new lines after certain characters
