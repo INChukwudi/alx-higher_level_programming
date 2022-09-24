@@ -5,7 +5,7 @@ Defines a function to print a sqaure
 """
 
 
-def print_sqaure(size):
+def print_square(size):
     """
     Prints a square with the character #
 

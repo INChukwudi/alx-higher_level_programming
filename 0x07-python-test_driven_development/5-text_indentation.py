@@ -5,7 +5,7 @@ Defines a function that prints a text with 2 new lines after certain characters
 """
 
 
-def text_identation(text):
+def text_indentation(text):
     """
     Prints a text with 2 new lines after certain characters
     The characters are ., ? and :

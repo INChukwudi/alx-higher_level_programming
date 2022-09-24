@@ -11,7 +11,7 @@ Usage of 3-say_my_name.py
     My name is Chuk wudi Ike Nwa ko
 
     >>> say_my_name("Chukwudi")
-    My name is Chukwudi
+    My name is Chukwudi 
 
     >>> say_my_name(None)
     Traceback (most recent call last):

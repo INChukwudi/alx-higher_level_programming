@@ -52,6 +52,7 @@ Test of Passing in One Number
 -----------------------------
     >>> add_integer(2)
     100
+
 the second argument defaults to 98
 
 Improper Usuage
@@ -111,4 +112,4 @@ Test for when One of the Arguments is Infinity
 
     >>> add_integer()
     Traceback (most recent call last):
-    TypeError: integer() missing 1 required positional argument: 'a'
+    TypeError: add_integer() missing 1 required positional argument: 'a'
