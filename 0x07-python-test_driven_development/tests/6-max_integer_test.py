@@ -54,3 +54,17 @@ class TestMaxInteger(unittest.TestCase):
         """
         test_list = [1.5, 2, 3.4, 5, 6.7]
         self.assertEqual(max_integer(test_list), 6.7)
+
+    def test_only_negative_numbers(self):
+        """
+        Test a list with negative integers only
+        """
+        test_list = [-1, -4, -9, -8]
+        self.assertEqual(max_integer(test_list), -1)
+
+    def test_one_negative_number(self):
+        """
+        Test a list with only one negative number
+        """
+        test_list = [0, 5, 2, -6, 9]
+        self.assertEqual(max_integer(test_list), 9)
