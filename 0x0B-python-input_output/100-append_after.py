@@ -7,7 +7,7 @@ Defines a function that insertes text in a file after a specific string
 
 def append_after(filename="", search_string="", new_string=""):
     """
-    Inserta a line of text to a file after each line containing a specific string
+    Inserta a line of text to a file after each line containing search_string
 
     Args:
         filename (str): name of the file
