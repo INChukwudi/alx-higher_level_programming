@@ -35,7 +35,22 @@ if __name__ == "__main__":
                 count += 1
 
             line = line.split()
-            size += int(line[-1])
+
+            try:
+                size += int(line[-1])
+            except (IndexError, ValueError):
+                pass
+
+            try:
+                if line[-2] in valid_codes:
+                    if status_codes.get(line[-2], -1) == -1:
+                        status_codes[line[-2]] = 1
+                    else:
+                        status_codes[line[-2]] += 1
+            except IndexError:
+                pass
+
+        print_statistics(size, status_codes)
 
     except KeyboardInterrupt:
         print_stats(size, status_codes)
