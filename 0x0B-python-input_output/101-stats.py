@@ -5,6 +5,19 @@ Script that reads stdin line by line and cmputes metrics
 """
 
 
+def print_statistics(size, status_codes):
+    """
+    Prints the gathered statistics
+
+    Args:
+        size (int): file size
+        status_codes (dict): status codes and their counts
+    """
+    print("File size: {}".format(size))
+    for key in sorted(status_codes):
+        print("{}: {}".format(key, status_codes[key]))
+
+
 if __name__ == "__main__":
     import sys
 
@@ -16,17 +29,14 @@ if __name__ == "__main__":
     try:
         for line in sys.stdin:
             if count == 10:
-                print("File size: {}".format(size))
-                for key in sorted(status_codes):
-                    print("{}: {}".format(key, status_codes[key]))
+                print_statistics(size, status_codes)
                 count = 1
             else:
                 count += 1
 
             line = line.split()
+            size += int(line[-1])
 
     except KeyboardInterrupt:
-        print("File size: {}".format(size))
-        for key in sorted(status_codes):
-            print("{}: {}".format(key, status_codes[key]))
+        print_stats(size, status_codes)
         raise
