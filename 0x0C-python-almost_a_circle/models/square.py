@@ -29,12 +29,12 @@ class Square(Rectangle):
         """
         Gets and sets the size attribute of the Square instance
         """
-        return self.width
+        return self.height
 
     @size.setter
     def size(self, value):
-        self.width = value
         self.height = value
+        self.width = value
 
     def update(self, *args, **kwargs):
         """
@@ -68,7 +68,7 @@ class Square(Rectangle):
                     else:
                         self.id = val
                 elif key == "size":
-                    self.size == val
+                    self.size = val
                 elif key == "x":
                     self.x = val
                 elif key == "y":
@@ -80,7 +80,7 @@ class Square(Rectangle):
         """
         return {
             "id": self.id,
-            "size": self.width,
+            "size": self.height,
             "x": self.x,
             "y": self.y
         }
@@ -89,5 +89,5 @@ class Square(Rectangle):
         """
         Return the string representation of the Square instance
         """
-        return "[Square] ({}) {}/{} - {}\
-                ".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x, self.y, self.height)
