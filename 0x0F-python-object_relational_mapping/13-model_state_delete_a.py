@@ -22,7 +22,7 @@ if __name__ == "__main__":
     for state in states:
         if "a" in state.name:
             statesTBD.append(state)
-    
+
     for state in statesTBD:
         session.delete(state)
     session.commit()
