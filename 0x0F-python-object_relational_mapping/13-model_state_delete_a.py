@@ -17,8 +17,12 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State)
+    statesTBD = []
 
     for state in states:
         if "a" in state.name:
-            session.delete(state)
+            statesTBD.append(state)
+    
+    for state in statesTBD:
+        session.delete(state)
     session.commit()
